@@ -1,35 +1,332 @@
-/* Outdated CSS */
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --header-footer-bg: #cccccc;
+  --nav-bg: #333;
+  --nav-text-color: white;
+  --section-bg: white;
+  --section-hover-bg: #e0e0e0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-h1 {
-    margin: 0;
+header {
+  background-color: var(--header-footer-bg);
+  text-align: center;
+  padding: 20px;
+}
+header h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav {
+  background-color: var(--nav-bg);
+  color: var(--nav-text-color);
+  padding: 10px;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-li {
-    margin: 0;
-    padding: 0;
+nav ul li {
+  margin: auto;
+  padding: 5px;
+}
+nav ul li:hover {
+  border-bottom: 2px solid var(--nav-text-color);
 }
 
-p {
-    margin: 0;
-    padding: 0;
+nav ul li a {
+  color: var(--nav-text-color);
+  text-decoration: none;
 }
 
-img {
-    width: 100%;
-    height: auto;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+section {
+  background-color: var(--section-bg);
+  margin: 13px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
+
+section:hover {
+  transform: scale(1.03);
+  background-color: var(--section-hover-bg);
+}
+
+section img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+
+section img:hover {
+  opacity: 0.8;
+}
+
+footer {
+  background-color: var(--header-footer-bg);
+  text-align: center;
+  padding: 10px;
+}
+
+body.dark-mode {
+  --background-color: #333;
+  --text-color: #f4f4f4;
+  --header-footer-bg: #444;
+  --nav-bg: #222;
+  --nav-text-color: #f4f4f4;
+  --section-bg: #444;
+  --section-hover-bg: #555;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out;
+}
+
+#back-to-top:hover {
+  background-color: rgb(237, 190, 102);
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.fas.fa-cog {
+  font-size: 20px;
+  color: orange;
+}
+
+#theme-toggle:hover .fas.fa-cog {
+  animation: rotate 0.6s linear infinite;
+}
+
+#types-of-sinks {
+  background-color: var(--section-bg);
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#types-of-sinks h2 {
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--section-bg);
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.image-container img:hover {
+  transform:rotateY(180deg);
+}
+
+.description {
+  text-align: center;
+  color: var(--text-color);
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#contact {
+  background-color: var(--section-bg);
+  padding: 20px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact label {
+  font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button:hover {
+  background-color: #555;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: row;
+      align-items: center;
+  }
+
+  section {
+      max-width: 100%;
+  }
+
+  .fas.fa-cog {
+      width: 25px;
+      height: 25px;
+  }
+  .gallery-column {
+    max-width: 100%;
+  }
+  #contact {
+    padding: 10px;
+ }
+ .image-container {
+    flex-direction: column;
+ }
+}
+
