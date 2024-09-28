@@ -3,56 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinks R Us - Old School Website</title>
+    <title>Sinks R Us - Modern Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <table width="100%" cellspacing="0" cellpadding="0" border="0">
-        <tr>
-            <td colspan="2" style="background-color: #cccccc; text-align: center; padding: 10px;">
-                <h1>Sinks R Us</h1>
-                <p>Your one-stop shop for all types of sinks</p>
-            </td>
-        </tr>
-        <tr>
-            <td width="20%" style="background-color: #333333; color: white; padding: 10px; vertical-align: top;">
-                <ul style="list-style-type: none; padding: 0;">
-                    <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">About Us</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Types of Sinks</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Features</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Contact Us</a></li>
-                </ul>
-            </td>
-            <td style="padding: 10px;">
-                <table width="100%" cellspacing="10" cellpadding="10" border="1">
-                    <tr>
-                        <td style="padding: 10px;">
-                            <img src="images/sink1.jpg" alt="Sink Image" width="100%" height="auto">
-                            <h2>About Our Sinks</h2>
-                            <p>At Sinks R Us, we offer a wide variety of sinks to suit every need. From classic designs to modern styles, our sinks are made from high-quality materials and built to last.</p>
-                        </td>
-                        <td style="padding: 10px;">
-                            <img src="images/sink2.jpg" alt="Sink Image" width="100%" height="auto">
-                            <h2>Types of Sinks</h2>
-                            <p>Explore our extensive range of sinks, including undermount, farmhouse, and vessel sinks. Each type comes with its own unique features and benefits to match your kitchen or bathroom design.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px;" colspan="2">
-                            <img src="images/sink3.jpeg" alt="Sink Features" width="100%" height="auto">
-                            <h2>Features and Benefits</h2>
-                            <p>Our sinks come with a range of features, including easy-to-clean surfaces, scratch resistance, and various styles to complement your decor. Learn more about what makes our sinks stand out.</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="background-color: #cccccc; text-align: center; padding: 10px;">
-                <p>&copy; 2024 Sinks R Us</p>
-            </td>
-        </tr>
-    </table>
+    <header>
+        <h1>Sinks R Us</h1>
+        <p>~~ Your one-stop shop for all types of sinks ~~</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#types-of-sinks">Types of Sinks</a></li>
+            <li><a href="#features-benefits">Features</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about-us">
+            <h2>About Our Sinks</h2>
+            <p>At Sinks R Us, we offer a wide variety of sinks to suit every need. From classic designs to modern styles, our sinks are made from high-quality materials and built to last.</p>
+        </section>  
+        <section id="features-benefits">
+            <h2>Features and Benefits</h2>
+            <p>Our sinks come with a range of features, including easy-to-clean surfaces, scratch resistance, and various styles to complement your decor. Learn more about what makes our sinks stand out.</p>
+        </section>    
+        <section id="types-of-sinks">
+            <h2>Types of Sinks</h2>
+            <p>Explore our extensive range of sinks, including vessel, farmhouse, and undermount sinks. Each type comes with its own unique features and benefits to match your kitchen or bathroom design.</p>
+            <div class="gallery-grid">
+                <div class="image-container">
+                    <div class="description">Undermount Sink</div>
+                    <img src="images/sink1.jpg" alt="Sink Image 1" class="zoom-img">                    
+                </div>
+                <div class="image-container">
+                    <div class="description">Farmhouse Sink</div>
+                    <img src="images/sink2.jpg" alt="Sink Image 2" class="zoom-img">                  
+                </div>
+                <div class="image-container">
+                    <div class="description">Vessel Sink</div>
+                    <img src="images/sink3.jpeg" alt="Sink Image 3" class="zoom-img"> 
+                </div>
+            </div>
+        </section>
+      
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">×</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us with any questions or comments!</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Sinks R Us</p>
+    </footer>
+    <button id="back-to-top">↑</button>
+    <button id="theme-toggle" aria-label="Toggle Theme">
+        <i class="fas fa-cog"></i>
+    </button>
+    
+    <script src="script.js"></script>
 </body>
 </html>
+
