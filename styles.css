@@ -7,7 +7,6 @@
   --section-bg: white;
   --section-hover-bg: #e0e0e0;
 }
-
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -15,7 +14,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-
 header {
   background-color: var(--header-footer-bg);
   text-align: center;
@@ -29,7 +27,6 @@ nav {
   color: var(--nav-text-color);
   padding: 10px;
 }
-
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -37,7 +34,6 @@ nav ul {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 nav ul li {
   margin: auto;
   padding: 5px;
@@ -45,19 +41,16 @@ nav ul li {
 nav ul li:hover {
   border-bottom: 2px solid var(--nav-text-color);
 }
-
 nav ul li a {
   color: var(--nav-text-color);
   text-decoration: none;
 }
-
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
 }
-
 section {
   background-color: var(--section-bg);
   margin: 13px;
@@ -67,28 +60,23 @@ section {
   max-width: 800px;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-
 section:hover {
   transform: scale(1.03);
   background-color: var(--section-hover-bg);
 }
-
 section img {
   width: 100%;
   height: auto;
   transition: opacity 0.3s ease-in-out;
 }
-
 section img:hover {
   opacity: 0.8;
 }
-
 footer {
   background-color: var(--header-footer-bg);
   text-align: center;
   padding: 10px;
 }
-
 body.dark-mode {
   --background-color: #333;
   --text-color: #f4f4f4;
@@ -98,7 +86,6 @@ body.dark-mode {
   --section-bg: #444;
   --section-hover-bg: #555;
 }
-
 #back-to-top {
   position: fixed;
   bottom: 20px;
@@ -112,11 +99,9 @@ body.dark-mode {
   display: none; /* Hidden by default */
   transition: opacity 0.3s ease-in-out;
 }
-
 #back-to-top:hover {
   background-color: rgb(237, 190, 102);
 }
-
 #theme-toggle {
   position: fixed;
   top: 20px;
@@ -125,16 +110,13 @@ body.dark-mode {
   border: none;
   cursor: pointer;
 }
-
 .fas.fa-cog {
   font-size: 20px;
   color: orange;
 }
-
 #theme-toggle:hover .fas.fa-cog {
   animation: rotate 0.6s linear infinite;
 }
-
 #types-of-sinks {
   background-color: var(--section-bg);
   padding: 20px;
@@ -143,17 +125,14 @@ body.dark-mode {
   border-radius: 5px;
   text-align: center;
 }
-
 #types-of-sinks h2 {
   margin-bottom: 20px;
 }
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
-
 .image-container {
   display: flex;
   flex-direction: column;
@@ -163,25 +142,20 @@ body.dark-mode {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-
 .image-container img {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
   cursor: pointer;
 }
-
 .image-container img:hover {
   transform:rotateY(180deg);
 }
-
 .description {
   text-align: center;
   color: var(--text-color);
 }
-
-
-/* The Modal (background) */
+/* The Modal */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -195,16 +169,12 @@ body.dark-mode {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
-
-/* Modal Content (image) */
 .modal-content {
   margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
 }
-
-/* Caption of Modal Image */
 #caption {
   margin: auto;
   display: block;
@@ -215,18 +185,15 @@ body.dark-mode {
   padding: 10px 0;
   height: 150px;
 }
-
 /* Add Animation - Zoom in the Modal */
 .modal-content, #caption { 
   animation-name: zoom;
   animation-duration: 0.6s;
 }
-
 @keyframes zoom {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
-
 /* The Close Button */
 .close {
   position: absolute;
@@ -237,41 +204,34 @@ body.dark-mode {
   font-weight: bold;
   transition: 0.3s;
 }
-
 .close:hover,
 .close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
-
 #contact {
   background-color: var(--section-bg);
   padding: 20px;
   margin: auto;
   border-radius: 5px;
 }
-
 #contact h2 {
   text-align: center;
   margin-bottom: 20px;
 }
-
 #contact p {
   text-align: center;
   margin-bottom: 20px;
 }
-
 #contact form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-
 #contact label {
   font-weight: bold;
 }
-
 #contact input,
 #contact textarea {
   padding: 10px;
@@ -280,7 +240,6 @@ body.dark-mode {
   width: 100%;
   box-sizing: border-box;
 }
-
 #contact button {
   padding: 10px 20px;
   background-color: #333;
@@ -290,11 +249,9 @@ body.dark-mode {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-
 #contact button:hover {
   background-color: #555;
 }
-
 @keyframes rotate {
   0% {
       transform: rotate(0deg);
@@ -303,18 +260,15 @@ body.dark-mode {
       transform: rotate(360deg);
   }
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
       flex-direction: row;
       align-items: center;
   }
-
   section {
       max-width: 100%;
   }
-
   .fas.fa-cog {
       width: 25px;
       height: 25px;
