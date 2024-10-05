@@ -55,7 +55,7 @@ nav ul li a {
 }
 button {
   border-radius: 5px;
-  background-color: rgba(102, 205, 170);
+  background-color: teal;
   border: none;
   padding: 8px;
   justify-content: end;
@@ -105,7 +105,7 @@ body.dark-mode {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: rgba(102, 205, 170);
+  background-color: teal;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -115,7 +115,7 @@ body.dark-mode {
   transition: opacity 0.3s ease-in-out;
 }
 #back-to-top:hover {
-  background-color: rgb(237, 190, 102);
+  background-color: rgba(237, 190, 102);
 }
 #theme-toggle {
   position: fixed;
@@ -127,7 +127,7 @@ body.dark-mode {
 }
 .fas.fa-cog {
   font-size: 20px;
-  color: rgba(102, 205, 170);
+  color: teal;
 }
 #theme-toggle:hover .fas.fa-cog {
   animation: rotate 0.6s linear infinite;
