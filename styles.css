@@ -55,7 +55,7 @@ nav ul li a {
 }
 button {
   border-radius: 5px;
-  background-color: orange;
+  background-color: rgb(102,205,170);
   border: none;
   padding: 8px;
   justify-content: end;
